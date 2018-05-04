@@ -1,4 +1,4 @@
-Analysis of Algorithms
+## Analysis of Algorithms
 
 # Exercise I
 Give an analysis of the running time with respect to the input size n of each of the following
@@ -75,14 +75,43 @@ search = function (array, arraySize, target) { // here arraySize === n
 # Exercise II
 
 a) Given an array a of n numbers, design a linear running time algorithm to nd the maximum value of
-a[j] - a[i], where j  i.
+a[j] - a[i], where j >= i.
+
+```
+max = (a) => {
+    minValue = a[0]
+    maxDifference = 0;
+    for(let i = 0; i < a.length; i++) {
+        minValue = min(minValue, a[i]);
+        maxDifference = max(maxDifference, a[i]-minValue);
+        return maxDifference
+    }
+}
+``` 
 
 b) Suppose that you have an n-story building and plenty of eggs. Suppose also that an egg is broken if it
-is thrown o 
-oor f or higher, and unbroken otherwise. Devise a strategy to determine the value of f
+is thrown off floor f or higher, and unbroken otherwise. Devise a strategy to determine the value of f
 such that the number of dropped eggs is minimized.
 
+```
+set testfloor equal to n/2
+low = 0;
+high = n
+while (low + 1 !== testfloor && high - 1 !== testfloor)
+    throw egg
+    if egg broken
+        high = testfloor
+        testfloor = (testfloor - low)/2
+    if egg unbroken
+        low = testfloor
+        testfloor += testfloor + (high - testfloor)/2
+throw egg
+if egg broken
+    f = testfloor
+if egg unbroken
+    f = testfloor + 1
 
+```
 
 # Exercise III. 
 Below is the the pseudo-code for the Quicksort algorithm:
