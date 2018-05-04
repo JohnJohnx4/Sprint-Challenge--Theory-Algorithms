@@ -51,13 +51,13 @@ both `antelope` and `antelopes`.)
   Remember the ε transition can be used to move between states without
   consuming input. 
 
-![regex](/media/regex.png)
+![regex](/theory/media/regex.png)
 
 * A lion can be sleeping, eating, hunting, or preening. Draw a state
   machine diagram for the lion and label the transition events that
   cause state transitions.
 
-![lion](/media/lion.png)
+![lion](/theory/media/lion.png)
 
 * The VT-100 terminal (console) outputs text to the screen as it
   receives it over the wire. One exception is that when it receives an
@@ -80,7 +80,7 @@ both `antelope` and `antelopes`.)
   * Draw a state machine diagram for a VT-100 that can consume regular
     character sequences as well as the two above ESC sequences.
 
-![VT-100](/media/VT-100.png)
+![VT-100](/theory/media/VT-100.png)
 
 > If you're curious, [here are all the VT-100 escape
 > sequences](http://ascii-table.com/ansi-escape-sequences-vt-100.php).
