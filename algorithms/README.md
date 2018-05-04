@@ -119,17 +119,21 @@ Below is the the pseudo-code for the Quicksort algorithm:
 ```
 function quicksort(array)
 if length(array) <= 1
-return array
+    return array
 select and remove a pivot element pivot from array
 create empty lists less and greater
 for each x in array
-if x <= pivot then append x to less
-else append x to greater
+    if x <= pivot then append x to less
+    else append x to greater
 return concatenate(quicksort(less), list(pivot), quicksort(greater))
 ```
 
-a) Suppose we implement quicksort so that the pivot is always chosen to be the rst element of the array.
+a) Suppose we implement quicksort so that the pivot is always chosen to be the first element of the array.
 What is the running time of this algorithm on an input array that is already sorted? Why?
+
+- O(n) the number of steps increases equally to the amount of n whether the input array is sorted or not, making it linear
 
 b) Suppose we implement quicksort so that the pivot is always magically chosen to be the median element
 of the array. What is the running time of this algorithm? Why?
+
+- O(n) still, because the algorithm will still have as many steps as the length of the array, making it linear
